@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Douyin Video Page Link Grabber",
+  "version": "1.0",
+  "description": "抓取抖音用户主页的视频页面链接",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons8-video-16.png",
+      "48": "icons8-video-48.png",
+      "128": "icons8-download-96.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.douyin.com/user/*", "*://www.douyin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
